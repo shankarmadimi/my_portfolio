@@ -1,0 +1,230 @@
+.skills-page{
+    .text-zone{
+        left:10%;
+        position:absolute;
+        top:50%;
+        transform: translateY(-50%);
+        width:40%;
+        vertical-align: middle;
+        display:table-cell;  /* Makes the container behave like a table cell */
+
+        h1{
+            font-size: 45px;
+            font-family: 'Coolvetica';
+            color:#00246B;
+            font-weight: 200;
+            margin-top: 0;
+            position: relative;
+            margin-bottom: 40px;
+            left:10px;
+            &::before{
+                content:'<h1>';
+                font-family: 'La Belle Aurore';
+                font-size:18px;
+                position:absolute;
+                margin-top: -10px;
+                left:-10px;
+                opacity:0.6;
+                line-height:18px;
+            }
+            &::after{
+                content:'<h1 />';
+                font-family: 'La Belle Aurore';
+                font-size:18px;
+                position:absolute;
+                margin-left: 20px;
+                left:-30px;
+                opacity:0.6;
+                line-height:18px;
+                bottom:-22px;
+            }
+        }
+        p {
+            /* Styling for paragraphs inside the text container */
+            span {
+                /* Styling for spans inside paragraphs */
+                color: darkred; /* Dark red color for span text */
+            }
+            font-size: 15px; /* Font size for paragraph */
+            color: #03045e; /* Dark blue color */
+            font-family: sans-serif; /* Sans-serif font for paragraphs */
+            min-width: fit-content; /* Ensures paragraphs don't stretch */
+            animation: pulse 1s; /* Animation for pulsing effect */
+
+            &:nth-of-type(1) {
+                animation-delay: 1.1s; /* Delays animation for the first paragraph */
+            }
+            &:nth-of-type(2) {
+                animation-delay: 1.2s; /* Delays animation for the second paragraph */
+            }
+            &:nth-of-type(3) {
+                animation-delay: 1.3s; /* Delays animation for the third paragraph */
+            }
+            &:nth-of-type(4) {
+                animation-delay: 1.4s; /* Delays animation for the fourth paragraph */
+            }
+        }
+    }
+
+    .text-animate-hover {
+        /* Hover effect for text animation */
+        &:hover {
+            color: #fff; /* Changes text color to white on hover */
+        }
+    }
+}
+
+.stage-cube-cont {
+    /* Cube spinner container */
+    width: 50%; /* Width of the cube container */
+    height: 100%; /* Full height */
+    top: 0; /* Top position */
+    padding-top: 18%; /* Adds padding to the top */
+    margin-left: 0; /* No left margin */
+    position: absolute; /* Absolute positioning */
+    right: 0; /* Positioned on the right side */
+    overflow: hidden; /* Hides overflowing content */
+
+    .cube-spinner {
+        /* Cube spinner itself */
+        animation-name: spincube; /* The cube spin animation */
+        animation-timing-function: ease-in-out; /* Smooth easing for rotation */
+        animation-iteration-count: infinite; /* Infinite rotation loop */
+        animation-duration: 12s; /* 12 seconds for one complete spin */
+        transform-style: preserve-3d; /* Maintain 3D transforms */
+        transform-origin: 100px 100px 0; /* Set center of rotation */
+        margin-left: calc(50% - 100px); /* Centers the cube horizontally */
+
+        div {
+            /* Each face of the cube */
+            position: absolute; /* Absolute positioning of each face */
+            width: 200px; /* Width of each face */
+            height: 200px; /* Height of each face */
+            border: 1px solid #fff; /* White border around each face */
+            background: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+            font-size: 100px; /* Large font size */
+            display: flex; /* Flexbox for centering the text inside each face */
+            justify-content: center; /* Centers text horizontally */
+            align-items: center; /* Centers text vertically */
+            box-shadow: 0 0 10px 0px #fff; /* White shadow around each face */
+        }
+
+        .face1 { transform: translateZ(100px); color: #E44D26; } /* Front face */
+        .face2 { transform: rotateY(90deg) translateZ(100px); color: #1572B6; } /* Right face */
+        .face3 { transform: rotateY(90deg) rotateX(90deg) translateZ(100px); color: #F7DF1E; } /* Top face */
+        .face4 { transform: rotateY(180deg) rotateZ(90deg) translateZ(100px); color: #61DAFB; } /* Back face */
+        .face5 { transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px); color: #007396; } /* Left face */
+        .face6 { transform: rotateX(-90deg) translateZ(100px); color: #4F5D73; } /* Bottom face */
+    }
+
+    @keyframes spincube {
+        /* Animation for spinning the cube */
+        from, to {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); /* Initial and final state */
+        }
+        16% {
+            transform: rotateY(-90deg) rotateZ(90deg); /* Spins a quarter turn */
+        }
+        33% {
+            transform: rotateY(-90deg) rotateX(90deg); /* Rotates a bit more */
+        }
+        50% {
+            transform: rotateY(-180deg) rotateZ(90deg); /* Half turn */
+        }
+        66% {
+            transform: rotateY(-270deg) rotateX(90deg); /* Spins almost full turn */
+        }
+        83% {
+            transform: rotateX(90deg); /* Continues the spinning */
+        }
+    }
+}
+
+/* Responsive adjustments for different screen sizes */
+@media screen and (max-width: 1124px) {
+    /* For screens smaller than 1124px */
+    .skills-page {
+        .text-zone {
+            width: 40%; /* Reduces text-zone width */
+            left: 5%; /* Adjusts left position */
+        }
+        .stage-cube-cont .cube-spinner {
+            margin-left: 17%; /* Centers cube spinner on smaller screens */
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    /* For screens smaller than 950px */
+    .skills-page {
+        display: flex; /* Switch to flexbox layout */
+        flex-direction: column; /* Stack elements vertically */
+        .text-zone {
+            width: 70%; /* Increase width of text-zone */
+            left: 10%; /* Adjust left position */
+            top: 40%; /* Adjust vertical position */
+        }
+        .stage-cube-cont {
+            width: 70%; /* Adjust cube container width */
+            top: 70%; /* Move it down */
+            height: 50%; /* Adjust height */
+            left: 10%; /* Position adjustment */
+            padding-top: 10%; /* Add some padding */
+            .cube-spinner {
+                position: relative; /* Adjust spinner position */
+                margin-left: 30%; /* Position adjustment */
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 685px) {
+    /* For screens smaller than 685px */
+    .skills-page .stage-cube-cont {
+        top: 75%; /* Further adjust vertical position */
+        padding-top: 15%; /* Add padding at the top */
+        .cube-spinner {
+            margin-left: 20%; /* Adjust spinner horizontal position */
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    /* For screens smaller than 515px */
+    .skills-page {
+        .text-zone {
+            top: 50%; /* Adjust top position */
+            h1 {
+                font-size: 35px; /* Smaller font size for heading */
+            }
+        }
+        .stage-cube-cont {
+            top: 90%; /* Move cube container further down */
+            width: 90%; /* Make cube container wider */
+            .cube-spinner {
+                margin-left: 20%; /* Adjust spinner position */
+                width: 100px; /* Smaller spinner size */
+                height: 100px; /* Smaller spinner size */
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    /* For screens smaller than 440px */
+    .skills-page .stage-cube-cont {
+        top: 90%; /* Move cube to bottom */
+        padding-top: 18%; /* Adjust padding */
+        left: 7%; /* Adjust left margin */
+        .cube-spinner {
+            margin-left: 20%; /* Adjust spinner position */
+        }
+    }
+}
+
+@media screen and (max-width: 418px) {
+    /* For screens smaller than 418px */
+    .skills-page .text-zone h1 {
+        font-size: 32px; /* Make heading font smaller */
+    }
+}
