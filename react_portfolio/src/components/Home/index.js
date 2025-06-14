@@ -35,7 +35,7 @@ const Home=()=>{
                 strArray={jobArray} idx={42} /> {/* Animate the job title */}
                 </h1>
                 <h2> {/* Subheading */}
-                Full stack Developer | React Developer |
+                Full ~stack Developer | React Developer |
                 <br />Data Structure Enthusiast
                 </h2>
                 <Link to="/contact" className='contact-button'>CONTACT ME</Link> {/* Contact button */}
