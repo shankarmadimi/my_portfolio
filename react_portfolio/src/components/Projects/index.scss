@@ -1,0 +1,216 @@
+/* Styles for the project page container */
+.projectpage {
+    position: absolute; /* Positions the container relative to its nearest positioned ancestor */
+    left: 10%; /* Moves the container 10% from the left edge */
+    top: 15%; /* Positions the top of the container 15% from the top */
+    bottom: 15%; /* Positions the bottom of the container 15% from the bottom */
+    width: 80%; /* Sets the width of the container to 80% of the parent */
+
+    /* Hover effect for animated text */
+    .text-animate-hover {
+        &:hover {
+            color: #fff; /* Changes text color to white on hover */
+        }
+    }
+
+    /* Styles for the heading */
+    h1 {
+        font-size: 45px; /* Sets font size to 45 pixels */
+        font-family: 'Coolvetica'; /* Uses the Coolvetica font */
+        color: #00246B; /* Sets text color to a deep blue */
+        margin-top: 0; /* Removes any top margin */
+        font-weight: 200; /* Sets the font weight to light */
+        margin-left: 20px; /* Moves the text 20px from the left */
+        position: relative; /* Ensures the pseudo-elements are positioned relative to this element */
+        margin-bottom: 60px; /* Adds space below the heading */
+        left: 10px; /* Moves the heading slightly to the right */
+
+        /* Adds pseudo-elements before and after the heading */
+        &::before {
+            content: '<h1>';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            position: absolute;
+            margin-top: -10px;
+            left: -10px;
+            opacity: 0.6;
+            line-height: 18px;
+        }
+
+        &::after {
+            content: '<h1 />';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            position: absolute;
+            margin-left: 20px;
+            left: -30px;
+            line-height: 18px;
+            bottom: -22px;
+            opacity: 0.6;
+        }
+    }
+
+    /* Styles for the projects section */
+    .projects {
+        display: flex; /* Enables flexbox layout */
+        flex-direction: row; /* Arranges items in a row */
+        flex-wrap: wrap; /* Allows wrapping to next row if needed */
+        align-items: stretch; /* Stretches items to fill container height */
+        justify-content: space-around; /* Spaces items evenly */
+        gap: 30px; /* Adds spacing between items */
+        position: absolute;
+        top: 20%; /* Positions projects section from the top */
+        left: 5%;
+        width: 90%; /* Sets the width to 90% of parent */
+        opacity: 0; /* Initially hidden */
+        animation: backInRight 1s 1.2s forwards; /* Applies animation */
+
+        /* Individual project card styling */
+        .project {
+            border-radius: 10px; /* Rounds the corners */
+            background: linear-gradient(180deg, rgba(119, 214, 246, 0.42) 0%, rgba(255, 255, 255, 0) 100%); /* Gradient background */
+            transition: 0.4s; /* Smooth transition */
+            box-shadow: 0 0 10px 0px #fff; /* Adds a glowing shadow */
+            padding: 18px 24px; /* Adds padding inside the card */
+            max-width: 250px; /* Limits width */
+            background-size: 0 100%;
+            background-repeat: no-repeat;
+            height: 380px; /* Fixed height */
+
+            &:hover {
+                background-size: 100% 100%; /* Expands background on hover */
+                cursor: pointer; /* Changes cursor to indicate interactivity */
+            }
+
+            .projectImg {
+                width: 100%; /* Makes image responsive */
+                height: 38%; /* Fixed height */
+                border-radius: 10px; /* Rounds corners */
+            }
+
+            .projectContent {
+                position: relative;
+                height: 220px; /* Fixed height */
+
+                h3 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    font-family: sans-serif;
+                    color: #020472;
+                    text-decoration: underline;
+                }
+
+                p {
+                    font-size: 13px;
+                    font-family: 'Coolvetica';
+                    color: #114579;
+                }
+
+                .skills {
+                    h4 {
+                        font-size: 12px;
+                        font-family: 'Times New Roman', Times, serif;
+                        text-decoration: underline;
+                        margin-bottom: 10px;
+                        color: rgb(1, 12, 20);
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        list-style: none;
+                        gap: 10px;
+                        padding: 0;
+                    }
+
+                    li {
+                        font-size: 14px;
+                        font-family: 'Coolvetica';
+                        color: rgb(94, 22, 22);
+                    }
+                }
+
+                a {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 13px;
+                    text-decoration: none;
+                    color: rgb(94, 22, 22);
+                    padding: 8px 20px;
+                    border: 2px solid #fff;
+                    border-radius: 5px;
+                    box-shadow: 0 0 1px 0px #b5b5b5;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: #c3c2c2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 1200px) {
+    .projectpage {
+        width: 90%;
+        left: 10%;
+        margin-top: -5%;
+    }
+
+    .projects {
+        width: 100%;
+        gap: 20px;
+
+        .project {
+            max-width: 220px;
+            height: 350px;
+        }
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projectpage {
+        width: 95%;
+        left: 2.5%;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    h1 {
+        font-size: 35px;
+        left: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projectpage {
+        width: 100%;
+        left: 0;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .project {
+            max-width: 90%;
+        }
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}

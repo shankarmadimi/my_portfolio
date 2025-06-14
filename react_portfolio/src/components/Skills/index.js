@@ -3,8 +3,7 @@ import Loader from 'react-loaders';
 import { useState,useEffect } from 'react';
 import AnimatedLetters from '../AnimateLetters';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCss3, faHtml5, faJava, faJsSquare,faNodeJs } from '@fortawesome/free-brands-svg-icons';
-import { faReact} from '@fortawesome/free-brands-svg-icons/faReact';
+import { faCss3, faHtml5, faJava, faJsSquare, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
 const Skills=()=>{
     const [letterClass,setLetterClass]=useState('text-animate');
     const skillArray="Skills & Experience".split("");
@@ -61,7 +60,7 @@ const Skills=()=>{
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
         <Loader type="ball-beat"/>
         </>
     );
