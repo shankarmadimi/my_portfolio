@@ -21,7 +21,7 @@ const About=()=>{
                     <AnimatedLetters letterClass={letterClass} strArray={aboutArray} idx={15} />
                 </h1>
                 <p>
-    I'm a passionate third-year <span>Computer Science</span> student at MIC, 
+    I'm a passionate fourth-year <span>Computer Science</span> student at MIC, 
     specializing in <span>Web Development</span> and <span>Data Structures & Algorithms (DSA)</span>.  
     I am driven by the ambition to secure a position in a leading IT company where I can work on 
     cutting-edge technologies and deliver impactful solutions.

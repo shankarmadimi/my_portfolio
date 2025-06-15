@@ -8,7 +8,7 @@ import Loader from 'react-loaders'; // Importing Loader component for page loadi
 const Home=()=>{ 
     const [letterClass,setLetterClass]=useState('text-animate'); // State to control text animation class
     const nameArray=" Shankar Madimi,".split(""); // Splitting the name into an array of letters
-    const jobArray="Front-end Developer".split(""); // Splitting the job title into an array of letters
+    const jobArray="Full stack Developer".split(""); // Splitting the job title into an array of letters
     const helloArray="Hello,".split(""); // Splitting the greeting text into an array of letters
 
     // useEffect to change the animation class after 5 seconds
@@ -35,7 +35,7 @@ const Home=()=>{
                 strArray={jobArray} idx={42} /> {/* Animate the job title */}
                 </h1>
                 <h2> {/* Subheading */}
-                Full ~stack Developer | React Developer |
+                Full stack Developer | React Developer |
                 <br />Data Structure Enthusiast
                 </h2>
                 <Link to="/contact" className='contact-button'>CONTACT ME</Link> {/* Contact button */}
