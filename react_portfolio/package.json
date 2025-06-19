@@ -2,7 +2,7 @@
   "name": "port26",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shankarmadimi.github.io/my_portfolio/",
+   "homepage": ".",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
