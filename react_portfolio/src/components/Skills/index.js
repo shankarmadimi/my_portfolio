@@ -34,7 +34,7 @@ const Skills=()=>{
                 <p>
                   Visit my <a href="https://www.linkedin.com/in/shankar-madimi-2ab375263" target="_blank" rel="noopener noreferrer">LinkedIn</a> profile for more details.
 
-                   Also you can checkout my resume on this <a href="https://drive.google.com/file/d/1pl8C8FEWxdCT3ai51zI8YbN_MH0DkYuy/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                   Also you can checkout my resume on this <a href="https://drive.google.com/file/d/1qLY5KBs8TYprnOQMOj0XhN_06XsbMecG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                    link</a>.
                 </p>
             </div>

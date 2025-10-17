@@ -35,7 +35,7 @@ const Projects = () => {
                                     <li>Responsive Design</li>
                                 </ul>
                             </div>
-                            <a href="https://github.com/shankarmadimi/my_portfolio" target="_blank">Source Code</a>
+                            <a href="https://github.com/shankarmadimi/my_portfolio" target="_blank" rel="noreferrer">Source Code</a>
                         </div>
                     </div>
                 </div>
